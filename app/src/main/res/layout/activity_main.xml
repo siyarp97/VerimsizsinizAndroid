@@ -7,87 +7,27 @@
     android:background="#000018"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_weight="1"
+        android:onClick="baslat"
+        android:text="Hesapla"
+        app:layout_constraintBottom_toTopOf="@+id/t1SonucKismi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-        <TextView
-            android:id="@+id/t1Hedefimiz"
-            android:layout_width="61dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="T1 Hedefimiz : "
-            android:textColor="@color/white" />
-
-        <TextView
-            android:id="@+id/t1Sonuc"
-            android:layout_width="274dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="@color/white" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="13dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-        <EditText
-            android:id="@+id/kalanGun"
-            android:layout_width="wrap_content"
-            android:layout_height="122dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Kalan Gün"
-            android:inputType="number"
-            android:textAlignment="center"
-            android:textColor="#EAEAEA"
-            android:textColorHint="@color/cardview_dark_background" />
-
-        <EditText
-            android:id="@+id/birimOrt"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Birim Ort."
-            android:inputType="number"
-            android:textAlignment="center"
-            android:textColorHint="@color/cardview_dark_background" />
-
-        <EditText
-            android:id="@+id/saat"
-            android:layout_width="wrap_content"
-            android:layout_height="122dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            android:textAlignment="center"
-            android:textColor="#EAEAEA" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="326dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -95,80 +35,338 @@
         <EditText
             android:id="@+id/t1"
             android:layout_width="wrap_content"
-            android:layout_height="110dp"
+            android:layout_height="67dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="number"
-            android:textAlignment="center"
-            android:textColor="#EAEAEA" />
+            android:hint="T1 Gir"
+            android:textColorHint="@color/cardview_dark_background"
+            android:textColor="#F7F5EB"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/t2"
             android:layout_width="wrap_content"
-            android:layout_height="116dp"
+            android:layout_height="68dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
+            android:hint="T2 Gir"
+            android:inputType="number"
             android:textAlignment="center"
-            android:textColor="#EAEAEA" />
+            android:textColor="#F7F5EB"
+            android:textColorHint="@color/cardview_dark_background"/>
 
         <EditText
             android:id="@+id/yapilan"
             android:layout_width="wrap_content"
-            android:layout_height="112dp"
+            android:layout_height="67dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="number"
-            android:textAlignment="center"
-            android:textColor="#EAEAEA" />
+            android:hint="Yapılanı Gir"
+            android:textColor="#F7F5EB"
+            android:textColorHint="@color/cardview_dark_background"
+            android:textAlignment="center" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/linearLayout5"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="9dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <EditText
+            android:id="@+id/kalanGun"
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Kalan Günü Gir"
+            android:textColor="#F7F5EB"
+            android:textColorHint="@color/cardview_dark_background"
+            android:textAlignment="center" />
+
+
+        <EditText
+            android:id="@+id/birimOrt"
+            android:layout_width="wrap_content"
+            android:layout_height="62dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Birim Ort. Gir"
+            android:textColor="#F7F5EB"
+            android:textColorHint="@color/cardview_dark_background"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/saat"
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Saati Gir"
+            android:textColor="#F7F5EB"
+            android:textColorHint="@color/cardview_dark_background"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <EditText
+            android:id="@+id/ayTam"
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Dün Ayın Kaçıydı?"
+            android:textColor="#F7F5EB"
+            android:textColorHint="@color/cardview_dark_background"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/ayGun"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="65dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
+            android:hint="Bu ay Kaç gün?"
+            android:inputType="number"
             android:textAlignment="center"
-            android:textColor="#EAEAEA" />
+            android:textColor="#F7F5EB"
+            android:textColorHint="@color/cardview_dark_background"/>
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="baslat"
-        android:text="Hesapla"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/ayTam"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:textAlignment="center"
-        android:textColor="#EAEAEA"
-        tools:layout_editor_absoluteX="-74dp"
-        tools:layout_editor_absoluteY="400dp" />
+    <LinearLayout
+        android:id="@+id/t1SonucKismi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/t2SonucKismi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <TextView
+            android:id="@+id/textViewt1"
+            android:layout_width="275dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T1 Hedefimiz : "
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="#F7F5EB"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/t1Sonuc"
+            android:layout_width="173dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FEAA2B"
+            android:textSize="20sp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/t2SonucKismi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/adetHedefKismi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t1SonucKismi">
+
+        <TextView
+            android:id="@+id/textViewt2"
+            android:layout_width="275dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T2 Hedefimiz : "
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="#F7F5EB"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/t2Sonuc"
+            android:layout_width="173dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FEAA2B"
+            android:textSize="20sp"
+            android:textAlignment="center"
+/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/adetHedefKismi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/verimlilikKismi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t2SonucKismi">
+
+        <TextView
+            android:id="@+id/textViewadet"
+            android:layout_width="275dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Adet Hedefimiz : "
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="#F7F5EB"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/adetHedefSonuc"
+            android:layout_width="173dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FEAA2B"
+            android:textSize="20sp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/verimlilikKismi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/t1TamamlananKismi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adetHedefKismi">
+
+        <TextView
+            android:id="@+id/textViewverimlilik"
+            android:layout_width="275dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Verimlilik Hedefimiz : "
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="#F7F5EB"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/verimlilikSonuc"
+            android:layout_width="173dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FEAA2B"
+            android:textSize="20sp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/t1TamamlananKismi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/t2TamamlananKismi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verimlilikKismi">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="275dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="T1 Tamamlanan : "
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="#F7F5EB"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/t1TamamlananSonuc"
+            android:layout_width="173dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FEAA2B"
+            android:textSize="20sp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/t2TamamlananKismi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t1TamamlananKismi">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="114dp"
+            android:layout_height="59dp"
+            android:layout_weight="1"
+            android:text="T2 Tamamlanan : "
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="#F7F5EB"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/t2TamamlananSonuc"
+            android:layout_width="92dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:textColor="#FEAA2B"
+            android:textSize="20sp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="91dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Ay Tamamlanan : "
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="#F7F5EB"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ayTamamlananSonuc"
+            android:layout_width="81dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FEAA2B"
+            android:textSize="20sp"
+            android:textAlignment="center" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
